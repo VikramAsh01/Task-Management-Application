@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task History - Task Management</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="task-history.css">
+</head>
+<body>
+    <div class="page">
+        <header class="topbar">
+            <a class="history-brand" href="dashboard.html"><span class="brand-icon">✓</span><span>Task Management</span></a>
+            <div class="topbar-right">
+                <button class="notification" id="notification" type="button" aria-label="Notifications">🔔</button>
+                <div class="admin-profile"><div class="profile-avatar">A</div><div><p class="admin-name">Admin</p><p class="admin-role">Administrator</p></div></div>
+            </div>
+        </header>
+        <main class="history-main">
+            <a href="dashboard.html" class="history-back">← Back to Dashboard</a>
+            <section class="history-heading">
+                <div>
+                    <h1>Task History</h1>
+                    <p>Archived tasks assigned to clients by all administrators.</p>
+                </div>
+                <label class="history-search"><span>Search history</span><input id="historySearch" type="search" placeholder="Task, client, admin, or file name"></label>
+            </section>
+            <p id="historyCount" class="history-count">Loading task history…</p>
+            <section id="historyList" class="history-list" aria-live="polite"></section>
+            <section class="client-history-section">
+                <div class="client-history-heading">
+                    <h2>Removed Clients</h2>
+                    <p>Archived client profiles and their task information.</p>
+                </div>
+                <p id="clientHistoryCount" class="history-count">Loading removed clients…</p>
+                <div id="clientHistoryList" class="history-list" aria-live="polite"></div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+    <script src="task-history.js"></script>
+    <script src="notifications.js"></script>
+</body>
+</html>

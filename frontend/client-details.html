@@ -1,0 +1,1395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Client Details - Task Management</title>
+
+    <link
+        rel="stylesheet"
+        href="client-details.css"
+    >
+
+</head>
+
+<body>
+
+    <div class="page">
+
+        <header class="topbar">
+
+            <div class="brand">
+
+                <div class="brand-icon">
+                    ✓
+                </div>
+
+                <span>
+                    Task Management
+                </span>
+
+            </div>
+
+            <div class="topbar-right">
+
+                <button
+                    class="notification"
+                    id="notification"
+                >
+                    🔔
+                </button>
+
+                <div class="admin-profile">
+
+                    <div class="profile-avatar">
+                        A
+                    </div>
+
+                    <div>
+
+                        <p class="admin-name">
+                            Admin
+                        </p>
+
+                        <p class="admin-role">
+                            Administrator
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <main class="main-content">
+
+            <button
+                type="button"
+                class="back-button"
+                id="backToDashboard"
+            >
+                ← Back to Dashboard
+            </button>
+
+
+            <div class="client-header">
+
+                <div class="client-header-left">
+
+                    <div class="client-avatar">
+                        C
+                    </div>
+
+                    <div>
+
+                        <h1>
+                            Client 1
+                        </h1>
+
+                        <p>
+                            Software Developer
+                        </p>
+
+                        <span>
+                            client1@example.com
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="add-task-button"
+                    id="addTaskButton"
+                >
+                    + Add Task
+                </button>
+
+            </div>
+
+
+            <section class="summary-grid">
+
+                <div class="summary-card">
+
+                    <div class="summary-icon total">
+                        📋
+                    </div>
+
+                    <div>
+
+                        <p>
+                            Total Tasks
+                        </p>
+
+                        <h2 id="totalTasks">
+                            3
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="summary-card">
+
+                    <div class="summary-icon pending">
+                        ⏳
+                    </div>
+
+                    <div>
+
+                        <p>
+                            Pending
+                        </p>
+
+                        <h2 id="pendingTasks">
+                            1
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="summary-card">
+
+                    <div class="summary-icon submitted">
+                        📤
+                    </div>
+
+                    <div>
+
+                        <p>
+                            Submitted
+                        </p>
+
+                        <h2 id="submittedTasks">
+                            1
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="summary-card">
+
+                    <div class="summary-icon completed">
+                        ✓
+                    </div>
+
+                    <div>
+
+                        <p>
+                            Completed
+                        </p>
+
+                        <h2 id="completedTasks">
+                            1
+                        </h2>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <section class="tasks-section">
+
+                <div class="tasks-header">
+
+                    <div>
+
+                        <h2>
+                            Client Tasks
+                        </h2>
+
+                        <p>
+                            Expand a task to view its complete details.
+                        </p>
+
+                    </div>
+
+
+                    <select id="taskFilter">
+
+                        <option value="All">
+                            All Tasks
+                        </option>
+
+                        <option value="Pending">
+                            Pending
+                        </option>
+
+                        <option value="Submitted">
+                            Submitted
+                        </option>
+
+                        <option value="Completed">
+                            Completed
+                        </option>
+
+                        <option value="Incomplete">
+                            Incomplete
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div id="taskList">
+
+
+                    <!-- TASK 1 -->
+
+                    <div
+                        class="task-card expanded"
+                        data-task-id="task-1"
+                        data-task="Prepare Monthly Report"
+                        data-status="Pending"
+                    >
+
+                        <div
+                            class="task-header"
+                            data-task-toggle
+                        >
+
+                            <div>
+
+                                <div class="task-title-row">
+
+                                    <h3>
+                                        Prepare Monthly Report
+                                    </h3>
+
+                                    <span class="status-badge pending">
+                                        Pending
+                                    </span>
+
+                                </div>
+
+                                <p>
+                                    Prepare the monthly performance
+                                    report and submit it for review.
+                                </p>
+
+                            </div>
+
+                            <span class="task-arrow">
+                                ▼
+                            </span>
+
+                        </div>
+
+
+                        <div class="task-body">
+
+
+                            <div class="detail-section expanded">
+
+                                <button
+                                    type="button"
+                                    class="section-toggle"
+                                >
+
+                                    <span>
+                                        Task Information
+                                    </span>
+
+                                    <b>
+                                        ▼
+                                    </b>
+
+                                </button>
+
+
+                                <div class="section-content">
+
+                                    <div class="information-grid">
+
+                                        <div>
+
+                                            <label>
+                                                Priority
+                                            </label>
+
+                                            <strong class="priority high">
+                                                High
+                                            </strong>
+
+                                        </div>
+
+                                        <div>
+
+                                            <label>
+                                                Deadline
+                                            </label>
+
+                                            <strong>
+                                                25 September 2026,
+                                                6:00 PM
+                                            </strong>
+
+                                        </div>
+
+                                        <div>
+
+                                            <label>
+                                                Assigned By
+                                            </label>
+
+                                            <strong>
+                                                Admin
+                                            </strong>
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="description-box">
+
+                                        <label>
+                                            Task Description
+                                        </label>
+
+                                        <p>
+                                            Prepare the monthly performance
+                                            report including all required
+                                            statistics, charts and findings.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="detail-section">
+
+                                <button
+                                    type="button"
+                                    class="section-toggle"
+                                >
+
+                                    <span>
+                                        Client Submission
+                                    </span>
+
+                                    <b>
+                                        ▼
+                                    </b>
+
+                                </button>
+
+
+                                <div class="section-content">
+
+                                    <div class="empty-submission">
+
+                                        <div>
+                                            📄
+                                        </div>
+
+                                        <h4>
+                                            No submission yet
+                                        </h4>
+
+                                        <p>
+                                            The client has not submitted
+                                            this task.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="detail-section">
+
+                                <button
+                                    type="button"
+                                    class="section-toggle"
+                                >
+
+                                    <span>
+                                        Reminders
+                                    </span>
+
+                                    <b>
+                                        ▼
+                                    </b>
+
+                                </button>
+
+
+                                <div class="section-content">
+
+                                    <div class="reminders-list">
+
+                                        <div class="reminder-item">
+
+                                            <div>
+
+                                                <strong>
+                                                    23 September 2026,
+                                                    10:00 AM
+                                                </strong>
+
+                                                <span>
+                                                    Website + Email
+                                                </span>
+
+                                            </div>
+
+                                            <div class="reminder-actions">
+
+                                                <button
+                                                    type="button"
+                                                    class="delete-reminder"
+                                                >
+                                                    Delete
+                                                </button>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <button
+                                        type="button"
+                                        class="add-reminder-button"
+                                    >
+                                        + Add Reminder
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="detail-section">
+
+                                <button
+                                    type="button"
+                                    class="section-toggle"
+                                >
+
+                                    <span>
+                                        Submission History
+                                    </span>
+
+                                    <b>
+                                        ▼
+                                    </b>
+
+                                </button>
+
+
+                                <div class="section-content">
+
+                                    <div class="empty-history">
+
+                                        No previous submissions.
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- TASK 2 -->
+
+                    <div
+                        class="task-card"
+                        data-task-id="task-2"
+                        data-task="Prepare Presentation"
+                        data-status="Submitted"
+                    >
+
+                        <div
+                            class="task-header"
+                            data-task-toggle
+                        >
+
+                            <div>
+
+                                <div class="task-title-row">
+
+                                    <h3>
+                                        Prepare Presentation
+                                    </h3>
+
+                                    <span class="status-badge submitted">
+                                        Submitted
+                                    </span>
+
+                                </div>
+
+                                <p>
+                                    Prepare the client presentation
+                                    according to the provided requirements.
+                                </p>
+
+                            </div>
+
+                            <span class="task-arrow">
+                                ▼
+                            </span>
+
+                        </div>
+
+
+                        <div class="task-body">
+
+
+                            <div class="detail-section">
+
+                                <button
+                                    type="button"
+                                    class="section-toggle"
+                                >
+
+                                    <span>
+                                        Task Information
+                                    </span>
+
+                                    <b>
+                                        ▼
+                                    </b>
+
+                                </button>
+
+
+                                <div class="section-content">
+
+                                    <div class="information-grid">
+
+                                        <div>
+
+                                            <label>
+                                                Priority
+                                            </label>
+
+                                            <strong class="priority medium">
+                                                Medium
+                                            </strong>
+
+                                        </div>
+
+                                        <div>
+
+                                            <label>
+                                                Deadline
+                                            </label>
+
+                                            <strong>
+                                                28 September 2026,
+                                                6:00 PM
+                                            </strong>
+
+                                        </div>
+
+                                        <div>
+
+                                            <label>
+                                                Assigned By
+                                            </label>
+
+                                            <strong>
+                                                Admin
+                                            </strong>
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="description-box">
+
+                                        <label>
+                                            Task Description
+                                        </label>
+
+                                        <p>
+                                            Create a professional presentation
+                                            covering the project overview,
+                                            progress, results and next steps.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="detail-section expanded">
+
+                                <button
+                                    type="button"
+                                    class="section-toggle"
+                                >
+
+                                    <span>
+                                        Client Submission
+                                    </span>
+
+                                    <b>
+                                        ▼
+                                    </b>
+
+                                </button>
+
+
+                                <div class="section-content">
+
+                                    <div class="submission-box">
+
+                                        <div class="submission-version">
+
+                                            <div class="version-header">
+
+                                                <span class="version-label">
+                                                    Version 1
+                                                </span>
+
+                                                <span class="submitted-date">
+                                                    Submitted 22 September 2026
+                                                </span>
+
+                                            </div>
+
+
+                                            <div class="report-box">
+
+                                                <label>
+                                                    Client Report
+                                                </label>
+
+                                                <p>
+                                                    I have completed the
+                                                    presentation and included
+                                                    the required project
+                                                    information.
+                                                </p>
+
+                                            </div>
+
+
+                                            <div class="file-row">
+
+                                                <div>
+
+                                                    <strong>
+                                                        Presentation.pdf
+                                                    </strong>
+
+                                                    <span>
+                                                        Client submitted file
+                                                    </span>
+
+                                                </div>
+
+                                                <button
+                                                    type="button"
+                                                    class="view-history-file"
+                                                >
+                                                    View File
+                                                </button>
+
+                                            </div>
+
+                                        </div>
+
+
+                                        <div class="submission-review">
+
+                                            <div class="review-buttons">
+
+                                                <button
+                                                    type="button"
+                                                    class="request-changes"
+                                                >
+                                                    Request Changes
+                                                </button>
+
+                                                <button
+                                                    type="button"
+                                                    class="mark-completed"
+                                                >
+                                                    ✓ Mark Completed
+                                                </button>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="detail-section">
+
+                                <button
+                                    type="button"
+                                    class="section-toggle"
+                                >
+
+                                    <span>
+                                        Reminders
+                                    </span>
+
+                                    <b>
+                                        ▼
+                                    </b>
+
+                                </button>
+
+
+                                <div class="section-content">
+
+                                    <div class="reminders-list">
+
+                                        <div class="reminder-item">
+
+                                            <div>
+
+                                                <strong>
+                                                    27 September 2026,
+                                                    10:00 AM
+                                                </strong>
+
+                                                <span>
+                                                    Website + Email
+                                                </span>
+
+                                            </div>
+
+                                            <div class="reminder-actions">
+
+                                                <button
+                                                    type="button"
+                                                    class="delete-reminder"
+                                                >
+                                                    Delete
+                                                </button>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <button
+                                        type="button"
+                                        class="add-reminder-button"
+                                    >
+                                        + Add Reminder
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="detail-section">
+
+                                <button
+                                    type="button"
+                                    class="section-toggle"
+                                >
+
+                                    <span>
+                                        Submission History
+                                    </span>
+
+                                    <b>
+                                        ▼
+                                    </b>
+
+                                </button>
+
+
+                                <div class="section-content">
+
+                                    <div class="empty-history">
+                                        No previous submissions.
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- TASK 3 -->
+
+                    <div
+                        class="task-card"
+                        data-task-id="task-3"
+                        data-task="Review Documentation"
+                        data-status="Completed"
+                    >
+
+                        <div
+                            class="task-header"
+                            data-task-toggle
+                        >
+
+                            <div>
+
+                                <div class="task-title-row">
+
+                                    <h3>
+                                        Review Documentation
+                                    </h3>
+
+                                    <span class="status-badge completed">
+                                        Completed
+                                    </span>
+
+                                </div>
+
+                                <p>
+                                    Review the provided documentation
+                                    and submit your findings.
+                                </p>
+
+                            </div>
+
+                            <span class="task-arrow">
+                                ▼
+                            </span>
+
+                        </div>
+
+
+                        <div class="task-body">
+
+
+                            <div class="detail-section">
+
+                                <button
+                                    type="button"
+                                    class="section-toggle"
+                                >
+
+                                    <span>
+                                        Task Information
+                                    </span>
+
+                                    <b>
+                                        ▼
+                                    </b>
+
+                                </button>
+
+
+                                <div class="section-content">
+
+                                    <div class="information-grid">
+
+                                        <div>
+
+                                            <label>
+                                                Priority
+                                            </label>
+
+                                            <strong class="priority low">
+                                                Low
+                                            </strong>
+
+                                        </div>
+
+                                        <div>
+
+                                            <label>
+                                                Deadline
+                                            </label>
+
+                                            <strong>
+                                                30 September 2026,
+                                                6:00 PM
+                                            </strong>
+
+                                        </div>
+
+                                        <div>
+
+                                            <label>
+                                                Assigned By
+                                            </label>
+
+                                            <strong>
+                                                Admin
+                                            </strong>
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="description-box">
+
+                                        <label>
+                                            Task Description
+                                        </label>
+
+                                        <p>
+                                            Review all project documentation
+                                            and identify missing or incorrect
+                                            information.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="detail-section">
+
+                                <button
+                                    type="button"
+                                    class="section-toggle"
+                                >
+
+                                    <span>
+                                        Client Submission
+                                    </span>
+
+                                    <b>
+                                        ▼
+                                    </b>
+
+                                </button>
+
+
+                                <div class="section-content">
+
+                                    <div class="submission-box">
+
+                                        <div class="submission-version">
+
+                                            <div class="version-header">
+
+                                                <span class="version-label">
+                                                    Version 3
+                                                </span>
+
+                                                <span class="approved-status">
+                                                    ✓ Approved
+                                                </span>
+
+                                            </div>
+
+
+                                            <div class="approval-info">
+
+                                                <strong>
+                                                    Completed by Admin
+                                                </strong>
+
+                                                <span>
+                                                    22 September 2026
+                                                </span>
+
+                                            </div>
+
+
+                                            <div class="report-box">
+
+                                                <label>
+                                                    Client Report
+                                                </label>
+
+                                                <p>
+                                                    Documentation has been
+                                                    reviewed and all required
+                                                    corrections have been made.
+                                                </p>
+
+                                            </div>
+
+
+                                            <div class="file-row">
+
+                                                <div>
+
+                                                    <strong>
+                                                        Documentation.pdf
+                                                    </strong>
+
+                                                    <span>
+                                                        Approved submission
+                                                    </span>
+
+                                                </div>
+
+                                                <button
+                                                    type="button"
+                                                    class="view-history-file"
+                                                >
+                                                    View File
+                                                </button>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="detail-section">
+
+                                <button
+                                    type="button"
+                                    class="section-toggle"
+                                >
+
+                                    <span>
+                                        Reminders
+                                    </span>
+
+                                    <b>
+                                        ▼
+                                    </b>
+
+                                </button>
+
+
+                                <div class="section-content">
+
+                                    <div class="reminders-list">
+
+                                        <div class="reminder-item">
+
+                                            <div>
+
+                                                <strong>
+                                                    29 September 2026,
+                                                    10:00 AM
+                                                </strong>
+
+                                                <span>
+                                                    Website Notification
+                                                </span>
+
+                                            </div>
+
+                                            <div class="reminder-actions">
+
+                                                <button
+                                                    type="button"
+                                                    class="delete-reminder"
+                                                >
+                                                    Delete
+                                                </button>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <button
+                                        type="button"
+                                        class="add-reminder-button"
+                                    >
+                                        + Add Reminder
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="detail-section">
+
+                                <button
+                                    type="button"
+                                    class="section-toggle"
+                                >
+
+                                    <span>
+                                        Submission History
+                                    </span>
+
+                                    <b>
+                                        ▼
+                                    </b>
+
+                                </button>
+
+
+                                <div class="section-content">
+
+                                    <div class="history-item">
+
+                                        <div>
+
+                                            <strong>
+                                                Version 2
+                                            </strong>
+
+                                            <span>
+                                                Changes Requested
+                                            </span>
+
+                                            <small>
+                                                Please correct the formatting
+                                                and resubmit.
+                                            </small>
+
+                                        </div>
+
+                                        <button
+                                            type="button"
+                                            class="view-history-file"
+                                        >
+                                            View File
+                                        </button>
+
+                                    </div>
+
+
+                                    <div class="history-item">
+
+                                        <div>
+
+                                            <strong>
+                                                Version 1
+                                            </strong>
+
+                                            <span>
+                                                Changes Requested
+                                            </span>
+
+                                            <small>
+                                                Please add the missing
+                                                documentation.
+                                            </small>
+
+                                        </div>
+
+                                        <button
+                                            type="button"
+                                            class="view-history-file"
+                                        >
+                                            View File
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- REMINDER MODAL -->
+
+    <div
+        class="modal"
+        id="reminderModal"
+    >
+
+        <div class="modal-box">
+
+            <div class="modal-header">
+
+                <h3>
+                    Add Reminder
+                </h3>
+
+                <button
+                    type="button"
+                    id="closeReminderModal"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <div class="modal-content">
+
+                <label>
+                    Reminder Date & Time
+                </label>
+
+                <input
+                    type="datetime-local"
+                    id="reminderDate"
+                >
+
+
+                <label>
+                    Reminder Method
+                </label>
+
+                <select id="reminderMethod">
+
+                    <option value="both">
+                        Website + Email
+                    </option>
+
+                    <option value="website">
+                        Website Notification
+                    </option>
+
+                    <option value="email">
+                        Email
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="modal-actions">
+
+                <button
+                    type="button"
+                    class="modal-cancel"
+                    id="closeReminderModalBottom"
+                >
+                    Cancel
+                </button>
+
+                <button
+                    type="button"
+                    class="modal-save"
+                    id="saveReminder"
+                >
+                    Add Reminder
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- REQUEST CHANGES MODAL -->
+
+    <div
+        class="modal"
+        id="feedbackModal"
+    >
+
+        <div class="modal-box">
+
+            <div class="modal-header">
+
+                <h3>
+                    Request Changes
+                </h3>
+
+                <button
+                    type="button"
+                    id="closeFeedbackModal"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <div class="modal-content">
+
+                <label>
+                    Feedback for Client
+                </label>
+
+                <textarea
+                    id="feedbackInput"
+                    rows="6"
+                    placeholder="Explain what the client needs to change..."
+                ></textarea>
+
+            </div>
+
+
+            <div class="modal-actions">
+
+                <button
+                    type="button"
+                    class="modal-cancel"
+                    id="cancelFeedback"
+                >
+                    Cancel
+                </button>
+
+                <button
+                    type="button"
+                    class="modal-save"
+                    id="confirmFeedback"
+                >
+                    Request Changes
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+   <script src="client-details.js"></script>
+   <script src="notifications.js"></script>
+
+</body>
+
+</html>

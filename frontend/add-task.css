@@ -1,0 +1,432 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #172b4d;
+}
+
+button,
+input,
+textarea,
+select {
+    font-family: inherit;
+}
+
+.page {
+    min-height: 100vh;
+}
+
+.topbar {
+    height: 70px;
+    background: white;
+    border-bottom: 1px solid #e5eaf1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 45px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.brand-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 7px;
+    background: #123e7c;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.brand span {
+    font-size: 17px;
+    font-weight: 600;
+    color: #17335f;
+}
+
+.topbar-right {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.notification {
+    border: none;
+    background: transparent;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.admin-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #123e7c;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.admin-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: #243b5c;
+}
+
+.admin-role {
+    font-size: 10px;
+    color: #7c8a9d;
+    margin-top: 3px;
+}
+
+.main-content {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 35px 25px 60px;
+}
+
+.page-header {
+    margin-bottom: 20px;
+}
+
+.back-button {
+    border: none;
+    background: transparent;
+    color: #245a9e;
+    font-size: 12px;
+    cursor: pointer;
+    padding: 0;
+    margin-bottom: 14px;
+}
+
+.page-header h1 {
+    font-size: 27px;
+    color: #142d54;
+    margin-bottom: 6px;
+}
+
+.page-header p {
+    font-size: 12px;
+    color: #7b8798;
+}
+
+.client-info {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 9px;
+    padding: 17px 20px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 20px;
+}
+
+.client-avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: #e8f0fb;
+    color: #245a9e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.client-label {
+    font-size: 10px;
+    color: #8995a6;
+    margin-bottom: 3px;
+}
+
+.client-info h3 {
+    font-size: 15px;
+    color: #263b5a;
+    margin-bottom: 3px;
+}
+
+.client-info p:last-child {
+    font-size: 11px;
+    color: #7c899a;
+}
+
+.form-card {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 9px;
+    padding: 25px;
+    margin-bottom: 20px;
+}
+
+.section-title {
+    margin-bottom: 22px;
+}
+
+.section-title h2 {
+    font-size: 17px;
+    color: #19365f;
+    margin-bottom: 5px;
+}
+
+.section-title p {
+    font-size: 11px;
+    color: #7b8798;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group:last-child {
+    margin-bottom: 0;
+}
+
+.form-group label {
+    display: block;
+    font-size: 11px;
+    font-weight: 600;
+    color: #42536c;
+    margin-bottom: 7px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    border: 1px solid #d7dee8;
+    border-radius: 6px;
+    outline: none;
+    background: white;
+    color: #26364f;
+    font-size: 12px;
+}
+
+.form-group input,
+.form-group select {
+    height: 42px;
+    padding: 0 12px;
+}
+
+.form-group textarea {
+    padding: 12px;
+    resize: vertical;
+    min-height: 130px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: #245a9e;
+}
+
+.form-group small {
+    display: block;
+    margin-top: 6px;
+    font-size: 9px;
+    color: #8a96a6;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.file-box {
+    min-height: 42px;
+    border: 1px dashed #cbd5e1;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 7px 10px;
+}
+
+.file-box input {
+    display: none;
+}
+
+.file-button {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    height: 28px;
+    padding: 0 12px;
+    border-radius: 4px;
+    background: #edf3fa;
+    color: #245a9e !important;
+    cursor: pointer;
+    margin: 0 !important;
+    font-size: 10px !important;
+}
+
+#fileName {
+    font-size: 10px;
+    color: #7c899a;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.reminder-card {
+    border: 1px solid #e0e6ee;
+    border-radius: 7px;
+    padding: 18px;
+    margin-bottom: 12px;
+    background: #fafbfd;
+}
+
+.reminder-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.reminder-title {
+    font-size: 12px;
+    font-weight: 600;
+    color: #29476d;
+}
+
+.delete-reminder {
+    border: none;
+    background: transparent;
+    color: #c94b4b;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+.delete-reminder:hover {
+    color: #a83232;
+}
+
+.add-reminder-button {
+    height: 38px;
+    padding: 0 16px;
+    border: 1px dashed #9eb2c9;
+    border-radius: 5px;
+    background: #f7faff;
+    color: #245a9e;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.add-reminder-button:hover {
+    background: #edf4fc;
+}
+
+.button-row {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.cancel-button,
+.save-button {
+    height: 40px;
+    padding: 0 22px;
+    border-radius: 5px;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.cancel-button {
+    border: 1px solid #d5dce5;
+    background: white;
+    color: #58677b;
+}
+
+.cancel-button:hover {
+    background: #f7f9fb;
+}
+
+.save-button {
+    border: none;
+    background: #123e7c;
+    color: white;
+}
+
+.save-button:hover {
+    background: #0d3063;
+}
+
+@media (max-width: 700px) {
+
+    .topbar {
+        padding: 0 20px;
+    }
+
+    .admin-profile div:last-child {
+        display: none;
+    }
+
+    .main-content {
+        padding: 25px 18px 45px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .form-card {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 450px) {
+
+    .brand span {
+        font-size: 14px;
+    }
+
+    .topbar-right {
+        gap: 12px;
+    }
+
+    .page-header h1 {
+        font-size: 23px;
+    }
+
+    .button-row {
+        flex-direction: column-reverse;
+    }
+
+    .cancel-button,
+    .save-button {
+        width: 100%;
+    }
+
+    .file-box {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .reminder-card {
+        padding: 15px;
+    }
+}

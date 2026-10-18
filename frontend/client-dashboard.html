@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Client Dashboard - Task Management</title>
+
+    <link rel="stylesheet" href="client-dashboard.css">
+</head>
+
+<body>
+
+    <div class="page">
+
+        <header class="topbar">
+
+            <div class="brand">
+
+                <div class="brand-icon">
+                    ✓
+                </div>
+
+                <span>
+                    Task Management
+                </span>
+
+            </div>
+
+            <div class="topbar-right">
+
+                <button
+                    class="notification-button"
+                    id="notificationButton"
+                >
+                    🔔
+                </button>
+
+                <div
+                    class="notification-panel hidden"
+                    id="notificationPanel"
+                ></div>
+
+                <div
+                    class="profile-container"
+                    id="profileContainer"
+                >
+
+                    <button
+                        class="profile-button"
+                        id="profileButton"
+                    >
+
+                        <div
+                            class="profile-avatar"
+                            id="profileAvatar"
+                        >
+                            C
+                        </div>
+
+                        <div class="profile-text">
+
+                            <p
+                                class="profile-name"
+                                id="profileName"
+                            >
+                                Client
+                            </p>
+
+                            <p
+                                class="profile-role"
+                                id="clientDesignation"
+                            >
+                                Client
+                            </p>
+
+                        </div>
+
+                        <span class="profile-arrow">
+                            ▾
+                        </span>
+
+                    </button>
+
+                    <div
+                        class="profile-menu"
+                        id="profileMenu"
+                    >
+
+                        <div class="profile-menu-header">
+
+                            <div
+                                class="profile-menu-avatar"
+                                id="profileMenuAvatar"
+                            >
+                                C
+                            </div>
+
+                            <div>
+
+                                <p
+                                    id="profileMenuName"
+                                >
+                                    Client
+                                </p>
+
+                                <span
+                                    id="profileMenuEmail"
+                                >
+                                    client@example.com
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="profile-menu-divider"></div>
+
+                        <button
+                            class="profile-menu-item"
+                            id="profileDetailsButton"
+                        >
+                            👤 Profile Details
+                        </button>
+
+                        <button
+                            class="profile-menu-item logout-item"
+                            id="logoutButton"
+                        >
+                            ↪ Logout
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <main class="main-content">
+
+            <section class="welcome-section">
+
+                <div>
+
+                    <p class="page-label">
+                        Client Dashboard
+                    </p>
+
+                    <h1>
+                        Welcome,
+                        <span id="welcomeName">
+                            Client
+                        </span>
+                    </h1>
+
+                    <p>
+                        View your assigned tasks, deadlines and submissions.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <section class="summary-grid">
+
+                <div class="summary-card">
+
+                    <div class="summary-icon total-icon">
+                        📋
+                    </div>
+
+                    <div>
+
+                        <p>
+                            Total Tasks
+                        </p>
+
+                        <h2 id="totalTasks">
+                            0
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="summary-card">
+
+                    <div class="summary-icon pending-icon">
+                        ⏳
+                    </div>
+
+                    <div>
+
+                        <p>
+                            Pending
+                        </p>
+
+                        <h2 id="pendingTasks">
+                            0
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="summary-card">
+
+                    <div class="summary-icon submitted-icon">
+                        📤
+                    </div>
+
+                    <div>
+
+                        <p>
+                            Submitted
+                        </p>
+
+                        <h2 id="submittedTasks">
+                            0
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="summary-card">
+
+                    <div class="summary-icon completed-icon">
+                        ✓
+                    </div>
+
+                    <div>
+
+                        <p>
+                            Completed
+                        </p>
+
+                        <h2 id="completedTasks">
+                            0
+                        </h2>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <section class="tasks-section">
+
+                <div class="section-header">
+
+                    <div>
+
+                        <h2>
+                            My Tasks
+                        </h2>
+
+                        <p>
+                            Tasks assigned to you by the administrator.
+                        </p>
+
+                    </div>
+
+                    <div class="task-count">
+
+                        <span id="taskCount">
+                            0
+                        </span>
+
+                        Tasks
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="tasks-container"
+                    id="tasksContainer"
+                >
+
+                    <div
+                        class="empty-state"
+                        id="emptyState"
+                    >
+
+                        <div class="empty-icon">
+                            📋
+                        </div>
+
+                        <h3>
+                            No tasks assigned
+                        </h3>
+
+                        <p>
+                            You currently do not have any tasks assigned.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <div
+        class="profile-modal"
+        id="profileModal"
+    >
+
+        <div class="profile-modal-content">
+
+            <div class="profile-modal-header">
+
+                <h2>
+                    Profile Details
+                </h2>
+
+                <button
+                    class="modal-close"
+                    id="modalClose"
+                >
+                    ×
+                </button>
+
+            </div>
+
+            <div class="profile-details">
+
+                <div class="large-profile-avatar">
+                    <span id="modalAvatar">
+                        C
+                    </span>
+                </div>
+
+                <div class="profile-detail-row">
+
+                    <span>
+                        Name
+                    </span>
+
+                    <strong id="modalName">
+                        Client
+                    </strong>
+
+                </div>
+
+                <div class="profile-detail-row">
+
+                    <span>
+                        Email
+                    </span>
+
+                    <strong id="modalEmail">
+                        client@example.com
+                    </strong>
+
+                </div>
+
+                <div class="profile-detail-row">
+
+                    <span>
+                        Role
+                    </span>
+
+                    <strong id="modalRole">
+                        Client
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="client-dashboard.js"></script>
+
+</body>
+</html>

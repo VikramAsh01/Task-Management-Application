@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Task - Task Management</title>
+    <link rel="stylesheet" href="add-task.css">
+</head>
+<body>
+
+    <div class="page">
+
+        <div class="topbar">
+
+            <div class="brand">
+                <div class="brand-icon">✓</div>
+                <span>Task Management</span>
+            </div>
+
+            <div class="topbar-right">
+
+                <button
+                    class="notification"
+                    id="notification"
+                >
+                    🔔
+                </button>
+
+                <div class="admin-profile">
+
+                    <div class="profile-avatar">
+                        A
+                    </div>
+
+                    <div>
+
+                        <p class="admin-name">
+                            Admin
+                        </p>
+
+                        <p class="admin-role">
+                            Administrator
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <main class="main-content">
+
+            <div class="page-header">
+
+                <div>
+
+                    <button
+                        class="back-button"
+                        id="backButton"
+                    >
+                        ← Back to Client
+                    </button>
+
+                    <h1>
+                        Add New Task
+                    </h1>
+
+                    <p>
+                        Create a new task for the selected client.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="client-info">
+
+                <div
+                    class="client-avatar"
+                    id="clientAvatar"
+                >
+                    C
+                </div>
+
+                <div>
+
+                    <p class="client-label">
+                        Adding task for
+                    </p>
+
+                    <h3
+                        id="clientName"
+                        class="client-name"
+                    >
+                        Loading...
+                    </h3>
+
+                    <p
+                        id="clientEmail"
+                        class="client-email"
+                    >
+                        Loading...
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <form id="taskForm">
+
+                <div class="form-card">
+
+                    <div class="section-title">
+
+                        <h2>
+                            Task Information
+                        </h2>
+
+                        <p>
+                            Enter the details of the task.
+                        </p>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="taskTitle">
+                            Task Title
+                        </label>
+
+                        <input
+                            type="text"
+                            id="taskTitle"
+                            placeholder="Enter task title"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="taskDescription">
+                            Task Description
+                        </label>
+
+                        <textarea
+                            id="taskDescription"
+                            placeholder="Describe what the client needs to complete..."
+                            rows="6"
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="taskFile">
+                            Task Attachment
+                        </label>
+
+                        <div class="file-box">
+
+                            <input
+                                type="file"
+                                id="taskFile"
+                            >
+
+                            <label
+                                for="taskFile"
+                                class="file-button"
+                            >
+                                Choose File
+                            </label>
+
+                            <span id="fileName">
+                                No file selected
+                            </span>
+
+                        </div>
+
+                        <small>
+                            You can attach any required task document or file.
+                        </small>
+
+                    </div>
+
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="priority">
+                                Priority
+                            </label>
+
+                            <select
+                                id="priority"
+                                required
+                            >
+
+                                <option value="">
+                                    Select priority
+                                </option>
+
+                                <option value="Low">
+                                    Low
+                                </option>
+
+                                <option value="Medium">
+                                    Medium
+                                </option>
+
+                                <option value="High">
+                                    High
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="deadline">
+                                Deadline
+                            </label>
+
+                            <input
+                                type="datetime-local"
+                                id="deadline"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-card">
+
+                    <div class="section-title">
+
+                        <h2>
+                            Reminders
+                        </h2>
+
+                        <p>
+                            Add one or more reminders for this task.
+                            Reminders are optional.
+                        </p>
+
+                    </div>
+
+
+                    <div
+                        id="remindersContainer"
+                    ></div>
+
+
+                    <button
+                        type="button"
+                        class="add-reminder-button"
+                        id="addReminderButton"
+                    >
+                        + Add Reminder
+                    </button>
+
+                </div>
+
+
+                <div class="button-row">
+
+                    <button
+                        type="button"
+                        class="cancel-button"
+                        id="cancelButton"
+                    >
+                        Cancel
+                    </button>
+
+
+                    <button
+                        type="submit"
+                        class="save-button"
+                    >
+                        Save Task
+                    </button>
+
+                </div>
+
+            </form>
+
+        </main>
+
+    </div>
+
+
+    <script src="script.js"></script>
+    <script src="add-task.js"></script>
+    <script src="notifications.js"></script>
+
+</body>
+</html>

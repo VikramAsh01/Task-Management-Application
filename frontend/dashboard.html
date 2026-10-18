@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Admin Dashboard - Task Management</title>
+
+    <link
+        rel="stylesheet"
+        href="dashboard.css"
+    >
+
+</head>
+
+<body>
+
+    <div class="page">
+
+        <header class="topbar">
+
+            <div class="brand">
+
+                <div class="brand-icon">
+                    ✓
+                </div>
+
+                <span>
+                    Task Management
+                </span>
+
+            </div>
+
+            <div class="topbar-right">
+
+                <button
+                    class="notification"
+                    id="notification"
+                >
+                    🔔
+                </button>
+
+                <div
+                    class="profile-container"
+                    id="profileContainer"
+                >
+
+                    <div
+                        class="admin-profile"
+                        id="adminProfile"
+                    >
+
+                        <div class="profile-avatar" id="profileAvatar">
+                            A
+                        </div>
+
+                        <div>
+
+                            <p
+                                class="admin-name"
+                                id="adminName"
+                            >
+                                Admin
+                            </p>
+
+                            <p class="admin-role">
+                                Administrator
+                            </p>
+
+                        </div>
+
+                        <span class="profile-arrow">
+                            ▼
+                        </span>
+
+                    </div>
+
+
+                    <div
+                        class="profile-menu"
+                        id="profileMenu"
+                    >
+
+                        <div class="profile-menu-header">
+
+                            <div
+                                class="profile-menu-avatar"
+                                id="profileMenuAvatar"
+                            >
+                                A
+                            </div>
+
+                            <div>
+
+                                <p
+                                    class="profile-menu-name"
+                                    id="profileMenuName"
+                                >
+                                    Admin
+                                </p>
+
+                                <p
+                                    class="profile-menu-username"
+                                    id="profileMenuUsername"
+                                >
+                                    Admin account
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="profile-menu-details">
+
+                            <div class="profile-detail-row">
+
+                                <span>
+                                    Role
+                                </span>
+
+                                <strong>
+                                    Administrator
+                                </strong>
+
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="profile-menu-actions">
+
+                            <button
+                                type="button"
+                                id="logoutButton"
+                                class="logout-button"
+                            >
+                                <span>
+                                    ↪
+                                </span>
+
+                                Log Out
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <main class="main-content">
+
+            <div class="page-header">
+
+                <div>
+
+                    <h1>
+                        Dashboard
+                    </h1>
+
+                    <p>
+                        Manage your clients and track their tasks.
+                    </p>
+
+                </div>
+
+                <div class="page-header-actions">
+                    <a class="task-history-link" href="task-history.html">Task History</a>
+                    <button
+                        class="add-client-button"
+                        id="addClientButton"
+                    >
+                        + Add Client
+                    </button>
+                </div>
+
+            </div>
+
+
+            <section class="summary-grid">
+
+                <div class="summary-card">
+
+                    <div class="summary-icon total-icon">
+                        📋
+                    </div>
+
+                    <div>
+
+                        <p>
+                            Total Tasks
+                        </p>
+
+                        <h2 id="totalTasks">
+                            0
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="summary-card">
+
+                    <div class="summary-icon pending-icon">
+                        ⏳
+                    </div>
+
+                    <div>
+
+                        <p>
+                            Pending
+                        </p>
+
+                        <h2 id="pendingTasks">
+                            0
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="summary-card">
+
+                    <div class="summary-icon submitted-icon">
+                        📤
+                    </div>
+
+                    <div>
+
+                        <p>
+                            Submitted
+                        </p>
+
+                        <h2 id="submittedTasks">
+                            0
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="summary-card">
+
+                    <div class="summary-icon completed-icon">
+                        ✓
+                    </div>
+
+                    <div>
+
+                        <p>
+                            Completed
+                        </p>
+
+                        <h2 id="completedTasks">
+                            0
+                        </h2>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <section class="clients-section">
+
+                <div class="section-header">
+
+                    <div>
+
+                        <h2>
+                            Clients
+                        </h2>
+
+                        <p>
+                            View clients and track their task progress.
+                        </p>
+
+                    </div>
+
+                    <div class="search-box">
+
+                        <span>
+                            🔍
+                        </span>
+
+                        <input
+                            type="text"
+                            id="searchClient"
+                            placeholder="Search clients..."
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="client-list"
+                    id="clientList"
+                >
+
+                </div>
+
+
+                <div
+                    class="no-results"
+                    id="noResults"
+                >
+
+                    <div>
+                        🔍
+                    </div>
+
+                    <h3>
+                        No clients found
+                    </h3>
+
+                    <p>
+                        Try searching with a different name.
+                    </p>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <script src="dashboard.js"></script>
+    <script src="notifications.js"></script>
+
+</body>
+
+</html>
